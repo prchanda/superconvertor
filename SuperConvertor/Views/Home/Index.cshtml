@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h1>Super Convertor</h1>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        // When your page is ready, wire up these events
+        $(function() {
+            // When your submit button is clicked
+            $("form").submit(function(e) {
+                // If it is not checked, prevent the default behavior (your submit)
+                if (!$('input[name="ConversionType"]').is(':checked')) {
+                    alert("Please ensure an Conversion Type is selected!");
+                    e.preventDefault();
+                }
+            });
+        });
+        setInterval("$('#recentfiles').load('Home/GetConvertedFiles')", 1000);
+    </script>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <p>
+            Super Convertor is a sample application that demonstrates how to convert a
+            a Microsoft Word Document '.doc' file or an Excel Spreadsheet '.xls' file to any other supported file format such as .txt .csv .pdf
+            that runs in an Azure Cloud Service or Web Site.
+        </p>
+        <p>It uses an open source simple command line utility for converting .doc & .xls files to any supported format such as Text, RTF, or PDF.</p>
+        <p>Refer this <a href="http://tobya.github.io/DocTo">link</a> for more information.</p>
+        <p>To get started choose a category to perform the conversion.</p>
+        <h2>Choose a category</h2>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new {enctype = "multipart/form-data"}))
+        {
+            <table>
+                <tr>
+                    <td style="padding: 10px">
+                        <label>@Html.RadioButton("ConversionType", "doc-pdf") Convert .doc/.docx file to .pdf</label>
+                    </td>
+                    <td style="padding: 10px">
+                        <label>@Html.RadioButton("ConversionType", "doc-rtf") Convert .doc/.docx file to .rtf</label>
+                    </td>
+                    <td style="padding: 10px">
+                        <label>@Html.RadioButton("ConversionType", "doc-html") Convert .doc/.docx file to .html</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px">
+                        <label>@Html.RadioButton("ConversionType", "xls-csv") Convert .xls/.xlsx file to .csv</label>
+                    </td>
+                    <td style="padding: 10px">
+                        <label>@Html.RadioButton("ConversionType", "xls-txt") Convert .xls/.xlsx file to .txt</label>
+                    </td>
+                    <td style="padding: 10px">
+                        <label>@Html.RadioButton("ConversionType", "xls-html") Convert .xls/.xlsx file to .html</label>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="margin-left: 20px; margin-top: 10px">
+                @Html.TextBox("file", "", new {type = "file"}) <br/>
+                <input type="submit" value="Upload"/>
+                @if (ViewBag.Message == "File Uploaded Successfully!!")
+                {
+                    <label style="color: green">
+                        <b>@ViewBag.Message</b>
+                    </label>
+                }
+                else
+                {
+                    <label style="color: red">
+                        <b>@ViewBag.Message</b>
+                    </label>
+                }
+            </div>
+        }
+    </div>
+    <div style="text-align: center">
+        <h3>
+            <u>Converted Files</u>
+        </h3>
+    </div>
+    <div id="recentfiles" class="col-md-4 ScrollStyle" style="align-content: center">
+        @{
+            Html.RenderPartial("_ConvertedFiles");
+        }
+    </div>
+</div>

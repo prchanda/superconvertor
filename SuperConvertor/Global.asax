@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SuperConvertor.MvcApplication" Language="C#" %>

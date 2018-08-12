@@ -1,0 +1,32 @@
+﻿@model IEnumerable<string>
+
+<script>
+    function downloadblob(filename) {
+        $.ajax({
+            type: "POST",
+            url: '/Home/DownloadAndSaveBlob',
+            data: "filename=" + filename,
+            success: function(url) {
+                var frame = document.createElement('iframe');
+                frame.src = url; // your Azure url
+                frame.style.display = 'none';
+                document.body.appendChild(frame);
+            },
+            error: function() { alert('An unexpected error has occured !'); }
+        });
+    }
+</script>
+
+<div style="border: groove">
+    @using (Html.BeginForm())
+    {
+        if (Model != null)
+        {
+            foreach (var blob in Model)
+            {
+                <label style="margin-left: 10px">@Html.RadioButton("Output file", blob, new {onclick = "downloadblob('" + blob.Substring(blob.LastIndexOf('/') + 1) + "');"}) @blob.Substring(blob.LastIndexOf('/') + 1)</label>
+                <br/>
+            }
+        }
+    }
+</div>
