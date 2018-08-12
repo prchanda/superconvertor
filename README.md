@@ -14,6 +14,4 @@ Please follow the below steps to setup the lab for [Cloud Service troubleshootin
 
 5. Similarly like Step 4, configure your service bus connection string. To keep things simple set the service bus connection string setting name as **Microsoft.ServiceBus.ConnectionString**, otherwise you need to update the references of the service bus connection setting name in the application code.
 
-6.  Publish the solution to Azure using the Visual Studio Publish Azure Application Wizard. You can refer [this](https://docs.microsoft.com/en-us/azure/vs-azure-tools-publish-azure-application-wizard) article if you are not aware as how to publish your cloud service solution to Azure. You dont have to wait for the whole deployment to get complete, you can proceed to the next step as soon as the cloud service roles are created.
-
-7.  Now you should see a cloud service created under your azure subscription.
+6.  Publish the solution to Azure using the Visual Studio Publish Azure Application Wizard. You can refer [this](https://docs.microsoft.com/en-us/azure/vs-azure-tools-publish-azure-application-wizard) article if you are not aware as how to publish your cloud service solution to Azure.
