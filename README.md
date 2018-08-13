@@ -14,4 +14,6 @@ Please follow the below steps to setup the lab for [Cloud Service troubleshootin
 
 5. Similarly like Step 4, configure your service bus connection string. To keep things simple set the service bus connection string setting name as **Microsoft.ServiceBus.ConnectionString**, otherwise you need to update the references of the service bus connection setting name in the application code.
 
-6.  Publish the solution to Azure using the Visual Studio Publish Azure Application Wizard. You can refer [this](https://docs.microsoft.com/en-us/azure/vs-azure-tools-publish-azure-application-wizard) article if you are not aware as how to publish your cloud service solution to Azure.
+6. **You must enable RDP in the package before publishing your service**. You can enable RDP in the package using Visual Studio by right-clicking the cloud service project in Solution Explorer and selecting ‘Configure Remote Desktop…’, or in the Publish wizard by checking the ‘Enable Remote Desktop for all roles’ checkbox. 
+
+7. Publish the solution to Azure using the Visual Studio Publish Azure Application Wizard. You can refer [this](https://docs.microsoft.com/en-us/azure/vs-azure-tools-publish-azure-application-wizard) article if you are not aware as how to publish your cloud service solution to Azure.
