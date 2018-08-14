@@ -37,6 +37,14 @@
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HealthMonitor\HealthMonitor.csproj">
+      <Name>HealthMonitor</Name>
+      <Project>{bd0f4d2a-23d2-4b89-b851-7575a058a8c3}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>HealthMonitor</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
     <ProjectReference Include="..\ProcessorEngine\ProcessorEngine.csproj">
       <Name>ProcessorEngine</Name>
       <Project>{7914e2de-d9da-41b0-931e-aa2c464f2901}</Project>
@@ -55,11 +63,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="HealthMonitorContent\" />
     <Folder Include="ProcessorEngineContent\" />
     <Folder Include="Profiles" />
     <Folder Include="SuperConvertorContent\" />
   </ItemGroup>
   <ItemGroup>
+    <DiagnosticsConfiguration Include="HealthMonitorContent\diagnostics.wadcfgx" />
     <DiagnosticsConfiguration Include="ProcessorEngineContent\diagnostics.wadcfgx" />
     <DiagnosticsConfiguration Include="SuperConvertorContent\diagnostics.wadcfgx" />
   </ItemGroup>

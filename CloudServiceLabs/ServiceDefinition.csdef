@@ -4,7 +4,7 @@
     <Sites>
       <Site name="Web">
         <Bindings>
-          <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="www.cloudservicelabs.com"/>
+          <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="www.cloudservicelabs.com" />
         </Bindings>
       </Site>
     </Sites>
@@ -34,5 +34,11 @@
         </Environment>
       </Task>
     </Startup>
+  </WorkerRole>
+  <WorkerRole name="HealthMonitor" vmsize="Standard_D1_v2">
+    <Runtime executionContext="elevated" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>

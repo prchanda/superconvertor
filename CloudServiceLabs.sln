@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperConvertor", "SuperConv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessorEngine", "ProcessorEngine\ProcessorEngine.csproj", "{7914E2DE-D9DA-41B0-931E-AA2C464F2901}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthMonitor", "HealthMonitor\HealthMonitor.csproj", "{BD0F4D2A-23D2-4B89-B851-7575A058A8C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7914E2DE-D9DA-41B0-931E-AA2C464F2901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7914E2DE-D9DA-41B0-931E-AA2C464F2901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7914E2DE-D9DA-41B0-931E-AA2C464F2901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0F4D2A-23D2-4B89-B851-7575A058A8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0F4D2A-23D2-4B89-B851-7575A058A8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0F4D2A-23D2-4B89-B851-7575A058A8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0F4D2A-23D2-4B89-B851-7575A058A8C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
