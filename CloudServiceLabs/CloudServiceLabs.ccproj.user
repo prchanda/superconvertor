@@ -3,5 +3,8 @@
   <PropertyGroup>
     <ActivePublishProfile>cloudservicelabsProduction</ActivePublishProfile>
     <RemoteDesktopMoreOptions>False</RemoteDesktopMoreOptions>
+    <PackageProfile>Cloud</PackageProfile>
+    <PackageSolutionConfiguration>Release</PackageSolutionConfiguration>
+    <PackageEnableRemoteDesktop>False</PackageEnableRemoteDesktop>
   </PropertyGroup>
 </Project>

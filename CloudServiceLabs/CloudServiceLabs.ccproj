@@ -12,6 +12,7 @@
     <AssemblyName>CloudServiceLabs</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>CloudServiceLabs</Name>
+    <PackageEnableRemoteDebugger>False</PackageEnableRemoteDebugger>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -4,12 +4,16 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=StorageAccountName;AccountKey=StorageAccountKey" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="" />
     </ConfigurationSettings>
   </Role>
   <Role name="ProcessorEngine">
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=StorageAccountName;AccountKey=StorageAccountKey" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="" />
     </ConfigurationSettings>
   </Role>
   <Role name="HealthMonitor">

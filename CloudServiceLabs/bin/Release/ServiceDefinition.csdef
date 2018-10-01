@@ -13,14 +13,12 @@
     <Sites>
       <Site name="Web">
         <Bindings>
-          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="Endpoint1" endpointName="Endpoint1" hostHeader="www.cloudservicelabs.com" />
         </Bindings>
       </Site>
     </Sites>
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
-      <Setting name="StorageConnectionString" />
-      <Setting name="Microsoft.ServiceBus.ConnectionString" />
     </ConfigurationSettings>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
@@ -28,7 +26,7 @@
     <Certificates></Certificates>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\prchanda\source\repos\CloudServiceLabs\CloudServiceLabs\rcf\Release\SuperConvertorContent\" />
+        <SourceDirectory path="C:\Projects\Cloud Service Labs\superconvertor\CloudServiceLabs\rcf\Release\SuperConvertorContent\" />
       </Content>
     </Contents>
   </WebRole>
@@ -36,8 +34,6 @@
     <Runtime executionContext="elevated" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
-      <Setting name="Microsoft.ServiceBus.ConnectionString" />
-      <Setting name="StorageConnectionString" />
     </ConfigurationSettings>
     <LocalResources>
       <LocalStorage name="FileStorage" cleanOnRoleRecycle="true" sizeInMB="100" />
@@ -53,7 +49,18 @@
     </Startup>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\prchanda\source\repos\CloudServiceLabs\CloudServiceLabs\rcf\Release\ProcessorEngineContent\" />
+        <SourceDirectory path="C:\Projects\Cloud Service Labs\superconvertor\CloudServiceLabs\rcf\Release\ProcessorEngineContent\" />
+      </Content>
+    </Contents>
+  </WorkerRole>
+  <WorkerRole name="HealthMonitor" vmsize="Standard_D1_v2">
+    <Runtime executionContext="elevated" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+    <Contents>
+      <Content destination=".\">
+        <SourceDirectory path="C:\Projects\Cloud Service Labs\superconvertor\CloudServiceLabs\rcf\Release\HealthMonitorContent\" />
       </Content>
     </Contents>
   </WorkerRole>
