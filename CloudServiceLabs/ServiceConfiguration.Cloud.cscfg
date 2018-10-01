@@ -3,7 +3,7 @@
   <Role name="SuperConvertor">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=pratyay;AccountKey=sVTkZp3YWxgAG9AxUltsym0KgrPp+Y3xmQT8BsVOUNn2mkJg9fJwC7dpnGQSzDR19IZ3Twz3UoOsWa6bWvIrXQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
       <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=StorageAccountName;AccountKey=StorageAccountKey" />
       <Setting name="Microsoft.ServiceBus.ConnectionString" value="" />
     </ConfigurationSettings>
@@ -11,7 +11,7 @@
   <Role name="ProcessorEngine">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=pratyay;AccountKey=sVTkZp3YWxgAG9AxUltsym0KgrPp+Y3xmQT8BsVOUNn2mkJg9fJwC7dpnGQSzDR19IZ3Twz3UoOsWa6bWvIrXQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
       <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=StorageAccountName;AccountKey=StorageAccountKey" />
       <Setting name="Microsoft.ServiceBus.ConnectionString" value="" />
     </ConfigurationSettings>
@@ -19,7 +19,7 @@
   <Role name="HealthMonitor">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
